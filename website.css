@@ -38,7 +38,7 @@
   background-image: url(images/source-3.gif);
   background-position: center; 
   background-repeat: no-repeat;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 @font-face {
@@ -63,17 +63,34 @@ h1 {
     }
 
 h2 {
-  font-family: 'louize_display_trialMdIt', sans-serif;
-  font-weight:bold;
-  font-style:normal;
+    font-family: 'louize_display_trialMdIt', sans-serif;
+    font-weight:bold;
+    font-style:normal;
+    color: black;
     }
 
 h3 {
-  font-family: 'louize_display_trialMdIt', sans-serif;
-  font-weight:bold;
-  font-style:normal;
-  color:white;
-  font-size:72px;
+    font-family: 'louize_display_trialMdIt', sans-serif;
+    font-weight:normal;
+    font-style:normal;
+    color:white;
+    font-size:72px;
+    }
+
+p{
+    font-family: 'louize_display_trialMdIt', sans-serif;
+    font-weight:normal;
+    font-style:normal;
+    color:darkblue;
+    font-size:24px;
+    }
+
+#contactform{
+    font-family: 'louize_display_trialMdIt', sans-serif;
+    font-weight:normal;
+    font-style:normal;
+    color:black;
+    font-size:14px;
     }
 
 #midnitesnack{
@@ -112,7 +129,17 @@ h1:hover{
     object-fit: contain;
 } 
 
-@-webkit-keyframes 'slide' {
+@keyframes slide{
+    0%{
+        background-position-y:0%;
+    }
+        100%
+        {
+        background-position-y:100%;
+        }
+}
+
+@-webkit-keyframes slide {
     0%{
     background-position-y:0%;
 }
@@ -125,9 +152,9 @@ h1:hover{
 #archive {
     background-color: black;
     font-family: 'louize_display_trialMdIt', sans-serif;
-        font-weight:normal;
-        font-style:normal;
-        font-size: 25px;
+    font-weight:normal;
+    font-style:normal;
+    font-size: 25px;
 }
 
 .videos {
@@ -158,9 +185,9 @@ h1:hover{
 
 body {
     font-family: 'louize_display_trialMdIt', sans-serif;
-        font-weight:normal;
-        font-style:normal;
-        font-size: 25px;
+    font-weight:normal;
+    font-style:normal;
+    font-size: 25px;
 }
 
 .carousel-nav-icon {
@@ -173,8 +200,8 @@ img{
 }
 
 .carousel-item{
-overflow-y: scroll;
-overflow-x: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .contact{
