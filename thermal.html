@@ -103,7 +103,7 @@
     var pubnub = new PubNub({
         publishKey: 'pub-c-9c802214-f8f5-4ae6-ba1c-5c648cf03431',
         subscribeKey: 'sub-c-84a68fe4-6e1f-11ea-a7c4-5e95b827fd71',
-        heartbeatInterval: 30
+        heartbeatInterval: 10
     });
     pubnub.addListener({
         presence: function (presenceEvent) {
