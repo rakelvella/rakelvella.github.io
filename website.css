@@ -40,10 +40,29 @@
   background-repeat: no-repeat;
   object-fit: cover;
 }
+.center-div4
+{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  border-radius: 3px;
+}
 
 @font-face {
     font-family: 'louize_display_trialMdIt';
-    src: url(LouizeDisplayTrial-MediumItalic.otf);
+    src: url(fonts/LouizeDisplayTrial-MediumItalic.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'space_grotesk';
+    src: url(fonts/SpaceGrotesk-Regular.otf);
     font-weight: normal;
     font-style: normal;
 }
@@ -57,9 +76,10 @@ a:hover{
 }
 
 h1 {
-    font-family: 'louize_display_trialMdIt', sans-serif;
+    font-family: 'space_grotesk', sans-serif;
     font-weight:normal;
     font-style:normal;
+    font-size: 24pt;
     }
 
 h2 {
@@ -78,10 +98,10 @@ h3 {
     }
 
 p{
-    font-family: 'louize_display_trialMdIt', sans-serif;
+    font-family: 'space_grotesk', sans-serif;
     font-weight:normal;
     font-style:normal;
-    color:darkblue;
+    color:black;
     font-size:24px;
     }
 
@@ -184,7 +204,7 @@ h1:hover{
 }
 
 body {
-    font-family: 'louize_display_trialMdIt', sans-serif;
+    font-family: 'space_grotesk', sans-serif;
     font-weight:normal;
     font-style:normal;
     font-size: 25px;
@@ -208,3 +228,59 @@ img{
     align-items: center;
     justify-content: center;
 }
+
+
+    /* Ripple Out */
+@-webkit-keyframes hvr-ripple-out {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  @keyframes hvr-ripple-out {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  .hvr-ripple-out {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    border: none;
+    background-color: white;
+    color: black;
+    font-family: 'space_grotesk', sans-serif;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 300px;
+  }
+  .hvr-ripple-out:before {
+    content: '';
+    position: absolute;
+    border: #e1e1e1 solid 6px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+  }
+  .hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
+    -webkit-animation-name: hvr-ripple-out;
+    animation-name: hvr-ripple-out;
+  }

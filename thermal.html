@@ -1,27 +1,59 @@
 <html>
 
 <head>
-    <title>T.A.R.A.S Robot Car Control</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>dump-your-data</title>
     <script src="paho.javascript-1.0.3/paho-mqtt.js" type="text/javascript"></script>
     <script src="scripts/index.js" type='text/javascript'></script>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="website.css">
+    <link rel="stylesheet" href="hover.css">
 </head>
 
 <body>
-    <h2>T.A.R.A.S Robot Car Control</h2>
-    <div>
-        <button onclick="moveForward()" class="big_button">
-            <h4>Forward</h4>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-transparent m-0 py-1">
+        <a class="nav-item nav-link active" href="index.html" style="color: chartreuse;">rakel</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-    </div>
-    <div>
-        <button onclick="moveBackward()" class="big_button">
-            <h4>Backwards</h4>
-        </button>
-    </div>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="menu.html" style="color: blueviolet;">Menu</a>
+                <a class="nav-item nav-link" href="contactform.html" style="color:  #ff42b4;">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/dyAEsF51KOo" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="center-div4">
+        <div class="container-fluid align-items-center justify-content-center">
+            <h1>dump-your-data</h1>
+            <br>
+            <div class="d-flex justify-content-center">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dyAEsF51KOo?autoplay=1"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <br>
+            <div class="d-flex justify-content-center">
+                <button onclick="moveForward()" class="hvr-ripple-out">
+                    <h4>Print</h4>
+                </button>
+            </div>
+            <br>
+            <div class="d-flex justify-content-center">
+                <button onclick="moveBackward()" class="hvr-ripple-out">
+                    <h4>Backwards</h4>
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
