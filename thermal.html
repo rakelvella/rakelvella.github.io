@@ -31,24 +31,98 @@
         </div>
     </nav>
 
-    <div class="center-div4">
-        <div class="container-fluid align-items-center justify-content-center">
-            <h1>dump-your-data</h1>
-            <br>
-            <div class="d-flex justify-content-center">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/dyAEsF51KOo?autoplay=1"
-                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+    <div class="container mt-3">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-sm-8">
+                <h1>dump-your-data</h1>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/live_stream?channel=UCzh1FuIFn6OBPgetx5RlPrA&autoplay=1"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
+                <br>
+                <div class="d-flex align-items-center justify-content-center">
+                    <button onclick="moveForward()" class="hvr-ripple-out">
+                        <h4>Print</h4>
+                    </button>
+                </div>
+                <br>
             </div>
-            <br>
-            <div class="d-flex justify-content-center">
-                <button onclick="moveForward()" class="hvr-ripple-out">
-                    <h4>Print</h4>
-                </button>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="ui raised segment d-flex flex-wrap">
+                            <p>
+                                orem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacus metus,
+                                facilisis id
+                                magna
+                                vel, gravida pellentesque dolor. Aenean ullamcorper diam id ipsum aliquet, efficitur
+                                lobortis
+                                purus
+                                auctor. Nunc feugiat malesuada vulputate. In ut faucibus leo. Pellentesque pellentesque,
+                                neque
+                                vitae
+                                laoreet imperdiet, justo ex porta libero, sed blandit risus quam eu ligula. Curabitur
+                                sit
+                                amet
+                                arcu
+                                eget leo feugiat fringilla eget ac lorem. Aenean tristique sagittis condimentum.
+                                Curabitur
+                                vel
+                                ipsum
+                                a sapien suscipit blandit. Praesent pharetra tortor non arcu sagittis, vitae dapibus
+                                enim
+                                fringilla.
+                                Quisque felis velit, ultricies eget turpis cursus, fermentum volutpat dolor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="sidebar-content">
+                            <div class="currently-active">
+                                <span>Currently Active: </span><span id="active"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <br>
         </div>
     </div>
 </body>
+
+<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.20.2.js"></script>
+<script type="text/javascript">
+    var active = document.getElementById('active');
+    function setCurrentlyActiveUsers(numberOfUsers) {
+        active.innerText = numberOfUsers.toString();
+    }
+    setCurrentlyActiveUsers(1);
+    var pubnub = new PubNub({
+        publishKey: 'pub-c-9c802214-f8f5-4ae6-ba1c-5c648cf03431',
+        subscribeKey: 'sub-c-84a68fe4-6e1f-11ea-a7c4-5e95b827fd71',
+        heartbeatInterval: 30
+    });
+    pubnub.addListener({
+        presence: function (presenceEvent) {
+            setCurrentlyActiveUsers(presenceEvent.occupancy);
+        }
+    });
+    pubnub.subscribe({
+        channels: ['myWebPage1'],
+        withPresence: true
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
 </html>
