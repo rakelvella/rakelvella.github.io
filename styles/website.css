@@ -52,21 +52,21 @@
 
 @font-face {
     font-family: 'space_grotesk';
-    src: url(/Users/rakelvella/Documents/GitHub/rakelvella.github.io/fonts/SpaceGrotesk-Regular.otf);
+    src: url(fonts/SpaceGrotesk-Regular.otf);
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'space_grotesk_medium';
-    src: url(/Users/rakelvella/Documents/GitHub/rakelvella.github.io/fonts/SpaceGrotesk-Medium.otf);
+    src: url(fonts/SpaceGrotesk-Medium.otf);
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'space_grotesk_light';
-    src: url(/Users/rakelvella/Documents/GitHub/rakelvella.github.io/fonts/SpaceGrotesk-Light.otf);
+    src: url(fonts/SpaceGrotesk-Light.otf);
     font-weight: medium;
     font-style: normal;
 }
