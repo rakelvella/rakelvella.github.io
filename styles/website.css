@@ -20,6 +20,7 @@
     width: 50%;
     height: 50%;
     border-radius: 0px;
+    flex-wrap: wrap;
 }
 
 .center-div3 {
@@ -117,15 +118,6 @@ p {
     font-size: 14px;
 }
 
-#midnitesnack {
-    background: repeating-linear-gradient(180deg, #b8fb3c, #5ce5d5, #7898fb, #001437 1000px);
-    background-size: 1000px 1000px;
-    background-position-x: 0%;
-    -webkit-animation: 'slide' 20s infinite linear forwards;
-    animation: 'slide' 20s infinite linear forwards;
-    margin: 0;
-}
-
 .homepage {
     background: repeating-linear-gradient(65deg, #ad7df5, #ffffff, #ff42b4, #dbfe02 300px);
     background-size: 100px 100px;
@@ -143,7 +135,7 @@ h1:hover {
     background-image: url("/Users/rakelvella/Documents/GitHub/rakelvella.github.io/images/source-2.gif");
     background-position: center;
     background-repeat: no-repeat;
-    object-fit: contain;
+    background-size: contain;
 }
 
 @keyframes slide {
@@ -164,30 +156,10 @@ h1:hover {
     }
 }
 
-#archive {
-    background-color: black;
-    font-family: 'space_grotesk', sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 25px;
-}
-
 .videos {
     background-color: black;
 }
 
-.zoom {
-    padding: 50px;
-    transition: transform .2s;
-    height: 100%;
-}
-
-.zoom:hover {
-    -ms-transform: scale(2);
-    -webkit-transform: scale(2);
-    transform: scale(2);
-    z-index: 10;
-}
 
 .menu {
     background: repeating-linear-gradient(180deg, #ad7df5, #ffffff, #ff42b4, #dbfe02 1000px);
