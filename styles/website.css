@@ -108,6 +108,7 @@ p {
     font-style: normal;
     color: black;
     font-size: 14px;
+    text-align: justify;
 }
 
 #contactform {
@@ -293,4 +294,10 @@ img {
     border: solid 1px #AFAFAF;
     border-radius: 6px;
     font-family: "space_grotesk";
+}
+
+.archive-image{
+    max-height: 400px;
+    max-width: auto;
+
 }

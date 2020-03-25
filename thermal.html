@@ -61,35 +61,48 @@
                 </div>
                 <br>
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4">
                 <div class="row">
                     <div class="col-12">
                         <div class="ui raised segment d-flex flex-wrap">
                             <p>
-                                orem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacus metus,
-                                facilisis id magna vel, gravida pellentesque dolor. Aenean ullamcorper diam id ipsum
-                                aliquet, efficitur lobortis purus auctor. Nunc feugiat malesuada vulputate. In ut
-                                faucibus
-                                leo. Pellentesque pellentesque, neque vitae laoreet imperdiet, justo ex porta libero,
-                                sed blandit risus quam eu ligula. Curabitur sit amet arcu eget leo feugiat fringilla
-                                eget ac lorem. Aenean tristique sagittis condimentum.
-                                Curabitur vel ipsum a sapien suscipit blandit. Praesent pharetra tortor non arcu
-                                sagittis, vitae dapibus enim fringilla. Quisque felis velit, ultricies eget turpis
-                                cursus, fermentum volutpat dolor.
+                                The viewer approaches the installation to look into the glass box, which is a physical
+                                metaphor for the transparency that we live in today. The glass box will contain a
+                                receipt with logs of data generated beforehand. Two white platforms varying height were
+                                built for the glass box and the thermal printer. One of the dummy cameras was installed
+                                with an ultrasonic sensor attached to an Arduino that was stuck to the top of the
+                                camera. The ultrasonic sensor is constantly feeding into the Raspberry Pi the distance
+                                between the CCTV camera and the viewer. Once the viewer gets in the vicinity of the
+                                glass
+                                box, the thermal printer automatically prints out a log of data. The receipt is not to
+                                be
+                                cut and is to be left dangling out of the printer untilthe whole receipt roll is
+                                finished and replaced. This will leave a footprint of every viewer that approaches the
+                                piece, a receipt will come out each time just like parking lot machines and any form of
+                                queue measurement system. The glass box may be filled with the log of data printed from
+                                the thermal printer once it is finished.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-6">
-                        <div class="sidebar-content">
-                            <div class="currently-active">
-                                <span>Currently Active: </span><span id="active"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <div class="">
+                    Renders of Installation
+                </div>
+                <img src=images/DYD/VERSION2_2.png class="archive-image hvr-float" alt="Responsive image">
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <img src=images/DYD/VERSION2_3.png class="archive-image hvr-float" alt="Responsive image">
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-content">
+        <div class="currently-active">
+            <span>Currently Active: </span><span id="active"></span>
         </div>
     </div>
 </body>
