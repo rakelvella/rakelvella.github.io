@@ -1,0 +1,47 @@
+.a1{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.a2{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top:100px;
+    padding-bottom:100px;
+}
+
+.b1{
+    padding-left: 30px;
+}
+
+ol{
+    font-size: 15pt;
+    text-align: justify;
+}
+
+p{
+    font-size: 11pt;
+    text-align: justify;
+    padding-right: 20px;
+}
+
+.c1{
+    max-height: 700px;
+    padding: 50px;
+    
+}
+
+.c2{
+    padding:20px;
+    display: flex;
+}
+@media screen and (max-width: 768px){
+
+    .a2{
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 50px;
+        padding-bottom:50px;
+    }
+}
