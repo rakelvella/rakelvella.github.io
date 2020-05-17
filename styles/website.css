@@ -299,10 +299,9 @@ img {
 }
 
 .archive-image{
-    max-height: 400px;
-    max-width: auto;
-
+    padding: 0px;
 }
+
 .container {
     position: relative;
     text-align: center;
