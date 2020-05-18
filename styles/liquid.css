@@ -30,6 +30,24 @@
       padding: 50px;
   }
 
+  .a3{
+      padding:50px;
+  }
+
+  .b1{
+      padding: 35px;
+      text-align: justify;
+      letter-spacing: 2pt;
+  }
+
+  h1{
+      color:white;
+  }
+  
+  p{
+      color: white;
+  }
+
   .images{
       padding-top:200px;
       padding-bottom:200px;
