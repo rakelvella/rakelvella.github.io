@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161872315-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-161872315-1');
+    </script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/website.css">
+    <link rel="stylesheet" href="styles/hover.css">
+    <link rel="stylesheet" href="styles/blobs.css">
+
+    <script src="paho.javascript-1.0.3/paho-mqtt.js" type="text/javascript"></script>
+    <script src="scripts/index.js" type='text/javascript'></script>
+
+    <title>Blobs</title>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-transparent m-0 py-1">
+        <a class="navbar-brand" href="index.html">
+            <img src=images/Asset5.png width="30" height="30" alt="">
+        </a>
+        <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="menu.html" style="color: blueviolet;">Menu</a>
+                <a class="nav-item nav-link" href="contactform.html" style="color:  #ff42b4;">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid a3">
+        <div class="row">
+            <div class="col-12">
+                <h1>blobs (2019)</h1>
+            </div>
+            <div class="col-12 col-md-6">
+                <img src="images/blobs/blobs-147.png" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="col-12 col-md-6 c1">
+                <p>When the program starts, it initiates a camera output layered underneath a number of particle blobs
+                    that represent the same shapes Victor Pasmore uses in his paintings. From the live camera input,
+                    a refreshing image is used in a particle class to create a number of particles that replace the
+                    actual pixels in the output. The blob particles are created by first collecting colours from his
+                    paintings,
+                    this is done in the program itself by using an external library, ColourScheme. For each colour a
+                    particle
+                    is created each with randomly assigned width and height within a range. The painting particles are
+                    then outputted on top of the live camera output so as to create the idea of an immersive experience
+                    within a Pasmore painting. A push button connected to the raspberry pi is used to capture a frame
+                    and these are saved accordingly. Another input of interactivity is the mouse; when moved on its
+                    x-axis the width of the webcam particles change and on the far-left they become almost lines. Sound
+                    is also outputted which uses this same variable to change its frequency.
+                    The idea was to create a poster that immerses the viewer looking at it and creates his own
+                    interpretation of a Pasmore painting. Apart from the visual appeal of the paintings this poster
+                    serves the purpose of outlining the main colours used in Pasmore’s paintings through the use of
+                    moving
+                    image on screen.</p>
+            </div>
+        </div>
+        <div class="row b1 d-flex">
+            <div class="col-md-4 col-6 order-md-0 order-0 a1 d-flex align-self-center">
+                <div class="embed-responsive embed-responsive-4by3">
+                    <iframe class="embed-responsive=item" width="560" height="315"
+                        src="https://www.youtube.com/embed/luSr8Aq1kOM" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-4 col-6 order-md-1 order-2 a1 d-flex align-self-center">
+                <div class="embed-responsive embed-responsive-4by3">
+                    <iframe class="embed-responsive=item" width="560" height="315"
+                        src="https://www.youtube.com/embed/mtL8EqVq80Y" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-4 col-6 order-md-2 order-4 a1 d-flex align-self-center">
+                <div class="embed-responsive embed-responsive-4by3">
+                    <iframe class="embed-responsive=item" width="560" height="315"
+                        src="https://www.youtube.com/embed/sYteS4wtWts" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-4 col-6 order-md-3 order-1 a2 d-flex flex-wrap align-content-center">
+                <img src="images/blobs/01.jpg" class="img-fluid d1" alt="Responsive image">
+                <p>Untitled, Victor Pasmore</p>
+            </div>
+            <div class="col-md-4 col-6 order-md-4 order-3 a2 d-flex flex-wrap align-content-center">
+                <img src="images/blobs/02.jpg" class="img-fluid d1" alt="Responsive image">
+                <p>What is the object out there? Mixed Media, Victor Pasmore</p>
+            </div>
+            <div class="col-md-4 col-6 order-md-5 order-5 a2 d-flex flex-wrap align-content-center">
+                <img src="images/blobs/03.jpg" class="img-fluid d1" alt="Responsive image">
+                <p>Black Symphony, Victor Pasmore</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

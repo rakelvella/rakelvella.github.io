@@ -185,9 +185,10 @@ body {
     width: 48px;
 }
 
-img {
+/**img {
     margin: 8px;
 }
+**/
 
 .carousel-item {
     overflow-y: scroll;
