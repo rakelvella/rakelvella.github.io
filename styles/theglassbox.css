@@ -17,3 +17,14 @@
         padding: 0px;
     }
 }
+
+.photos{
+    padding-bottom: 150px;
+}
+
+.centered2{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
