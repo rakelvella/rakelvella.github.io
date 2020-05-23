@@ -13,6 +13,7 @@ function PrintLog() {
         // connect the client
     client.connect(options);
 }
+
 // called when the client connects
 function sendPrintLogMessage() {
     message = new Paho.MQTT.Message("Forward");

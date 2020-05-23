@@ -19,8 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>The Glass Box</title>
     <script src="paho.javascript-1.0.3/paho-mqtt.js" type="text/javascript"></script>
@@ -35,8 +34,7 @@
         <a class="navbar-brand" href="index.html">
             <img src=images/Asset5.png width="30" height="30" alt="">
         </a>
-        <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -47,62 +45,63 @@
         </div>
     </nav>
 
-    <div class="container-fluid">
+
+
+    <div class="container mt-3">
         <div class="row d-flex justify-content-center title">
             <h1>The Glass Box</h1>
             <br>
         </div>
-        <div class="row d-flex align-content-center justify-content-center">
-            <div class="col-10 d-flex align-content-center justify-content-center video">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="https://player.vimeo.com/video/418393354" width="1280" height="960" frameborder="0"
-                        allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="container mt-3">
         <div class="row align-items-center justify-content-center">
             <div class="col-sm-8">
 
                 <div class="d-flex justify-content-center">
-                    <iframe width="560" height="315"
-                        src="https://www.youtube.com/embed/live_stream?channel=UCzh1FuIFn6OBPgetx5RlPrA&autoplay=1"
-                        frameborder="0" allowfullscreen></iframe>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/live_stream?channel=UCzh1FuIFn6OBPgetx5RlPrA&autoplay=1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+                <br>
+                <div id="myProgress">
+                    <div id="myBar"></div>
                 </div>
                 <br>
                 <div class="d-flex align-items-center justify-content-center">
-                    <button onclick="PrintLog()" class="hvr-ripple-out">
+                    <button onclick="PrintLog(), move()" class="" id="print_button">
                         <h4>Print</h4>
                     </button>
+
                 </div>
                 <br>
+
             </div>
             <div class="col-md-4">
                 <div class="row">
                     <div class="col-12">
                         <div class="ui raised segment d-flex flex-wrap">
                             <p>
-                                The viewer approaches the installation to look into the glass box. The glass box will
-                                contain a receipt with logs of data generated beforehand. One of the dummy cameras is
-                                installed with an ultrasonic sensor attached to an Arduino that was stuck to the
-                                top of the camera. The ultrasonic sensor is constantly feeding into the Raspberry Pi the
-                                distance between the CCTV camera and the viewer. Once the viewer gets in the vicinity of
-                                the glass box, the thermal printer automatically
-                                prints out a log of data. The receipt is not to be cut and is to be left dangling out of
-                                the printer until the whole receipt roll is finished and replaced. This will leave a
-                                footprint of every viewer that approaches the
-                                piece, a receipt will come out each time just like parking lot machines and any form of
-                                queue measurement system. The glass box may be filled with the log of data printed from
-                                the thermal printer once it is finished.
+                                The viewer approaches the installation to look into the glass box. The glass box will contain a receipt with logs of data generated beforehand. One of the dummy cameras is installed with an ultrasonic sensor attached to an Arduino that was stuck to the
+                                top of the camera. The ultrasonic sensor is constantly feeding into the Raspberry Pi the distance between the CCTV camera and the viewer. Once the viewer gets in the vicinity of the glass box, the thermal printer automatically
+                                prints out a log of data. The receipt is not to be cut and is to be left dangling out of the printer until the whole receipt roll is finished and replaced. This will leave a footprint of every viewer that approaches the
+                                piece, a receipt will come out each time just like parking lot machines and any form of queue measurement system. The glass box may be filled with the log of data printed from the thermal printer once it is finished.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="container-fluid">
+            <div class="row d-flex align-content-center justify-content-center">
+                <div class="col-10 d-flex align-content-center justify-content-center video">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://player.vimeo.com/video/418393354" width="1280" height="960" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
         <div class="container">
 
             <div class="row renders">
@@ -143,6 +142,28 @@
         </div>
     </div>
 
+    <script>
+        var i = 0;
+
+        function move() {
+            if (i == 0) {
+                i = 1;
+                var elem = document.getElementById("myBar");
+                var width = 1;
+                var id = setInterval(frame, 50);
+
+                function frame() {
+                    if (width >= 100) {
+                        clearInterval(id);
+                        i = 0;
+                    } else {
+                        width++;
+                        elem.style.width = width + "%";
+                    }
+                }
+            }
+        }
+    </script>
     <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.20.2.js"></script>
     <script type="text/javascript">
         var active = document.getElementById('active');
@@ -157,7 +178,7 @@
             heartbeatInterval: 10
         });
         pubnub.addListener({
-            presence: function (presenceEvent) {
+            presence: function(presenceEvent) {
                 setCurrentlyActiveUsers(presenceEvent.occupancy);
             }
         });
@@ -166,15 +187,9 @@
             withPresence: true
         });
     </script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 
