@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+		<script type="module">
+
+			import * as THREE from './node_modules/three/build/three.module.js';
+
+			import { RoomEnvironment } from './node_modules/three/examples/jsm/environments/RoomEnvironment.js';
+			import { GLTFLoader } from './node_modules/three/examples/jsm/loaders/GLTFLoader.js';
+
+			import { KTX2Loader } from './node_modules/three/examples/jsm/loaders/KTX2Loader.js';
+			import { MeshoptDecoder } from './node_modules/three/examples/jsm/libs/meshopt_decoder.module.js';
+				
+
+			let camera, scene, renderer, model;
+
+			init();
+			render();
+
+			function init() {
+
+				const container = document.createElement( 'div' );
+				document.body.appendChild( container );
+
+				renderer = new THREE.WebGLRenderer( { antialias: true } );
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				renderer.toneMapping = THREE.ReinhardToneMapping;
+				renderer.toneMappingExposure = 0.7;
+				renderer.outputEncoding = THREE.sRGBEncoding;
+				container.appendChild( renderer.domElement );
+
+				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
+				camera.position.set( 0, 20, 150 );
+
+				const environment = new RoomEnvironment();
+				const pmremGenerator = new THREE.PMREMGenerator( renderer );
+
+				scene = new THREE.Scene();
+				scene.background = new THREE.Color( 0x000000 );
+				scene.environment = pmremGenerator.fromScene( environment ).texture;
+
+				const ktx2Loader = new KTX2Loader()
+					.setTranscoderPath( 'js/libs/basis/' )
+					.detectSupport( renderer );
+
+				const loader = new GLTFLoader().setPath( 'models/' );
+				loader.setKTX2Loader( ktx2Loader );
+				loader.setMeshoptDecoder( MeshoptDecoder );
+				loader.load( 'scene.glb', function ( gltf ) {
+                    
+                    model = gltf.scene;
+					// coffeemat.glb was produced from the source scene using gltfpack:
+					// gltfpack -i coffeemat/scene.gltf -o coffeemat.glb -cc -tc
+					// The resulting model uses EXT_meshopt_compression (for geometry) and KHR_texture_basisu (for texture compression using ETC1S/BasisLZ)
+					gltf.scene.scale.set(10,10,10)
+					gltf.scene.position.y = 5;
+
+					scene.add( gltf.scene );
+                    animate();
+					render();
+
+				} );
+
+
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+			}
+
+			function onWindowResize() {
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+				render();
+
+			}
+
+			//
+
+			function render() {
+				renderer.render( scene, camera );
+
+			}
+			
+			function animate() {
+        renderer.render(scene,camera);
+        if (model) model.rotation.y += 0.006;
+        requestAnimationFrame(animate);
+      }
+
+		</script>
+
+</body>
+</html>

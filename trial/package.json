@@ -1,0 +1,17 @@
+{
+  "name": "trial",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "gltf-pipeline": "^3.0.2",
+    "three": "^0.125.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    
+    "test": "app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
