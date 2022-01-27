@@ -4,7 +4,7 @@
   "main": "app.js",
   "dependencies": {
     "gltf-pipeline": "^3.0.2",
-    "three": "^0.125.2"
+    "three": "^0.137.0"
   },
   "devDependencies": {},
   "scripts": {
