@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: FT-88;
-    src: url(/fonts/FT88-Bold.woff);
+    src: url(https://rakelvella.github.io/web/fonts/FT88-Bold.woff);
     font-weight: bold;
 }
 
@@ -107,7 +107,7 @@ background: #FFFFFF;
     align-items: center;
     text-align: center;
     height: 90vh;
-  background-image: url(/assets/particles.svg);
+  background-image: url(https://rakelvella.github.io/web/assets/particles.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
