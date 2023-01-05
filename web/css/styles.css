@@ -1,0 +1,190 @@
+@import url(https://fonts.googleapis.com/css?family=DM+Mono);
+@import url(https://fonts.googleapis.com/css?family=Space+Mono);
+
+
+@font-face {
+    font-family: FT-88;
+    src: url(/fonts/FT88-Regular.woff);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: FT-88;
+    src: url(/fonts/FT88-Bold.woff);
+    font-weight: bold;
+}
+
+body {
+    background-color: black;
+    margin: 0px;
+}
+
+.marquee {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 68px;
+    overflow-x: hidden;
+  }
+
+  .track {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 12s linear infinite;
+  }
+  
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  
+
+/* desktop_body */
+.desktop_body {
+    font-family: 'Space Mono';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 36px;
+color:#FFFFFF;
+}
+
+.desktop_h1 {
+    font-family: 'FT88';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 95.9941px;
+    line-height: 83%;
+    /* or 80px */
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+/* desktop_h2 */
+h2{
+    font-family: 'Space Mono';
+font-style: normal;
+font-weight: 400;
+font-size: 64px;
+line-height: 99%;
+/* or 63px */
+letter-spacing: -0.02em;
+text-transform: uppercase;
+color: white;
+
+}
+
+.button{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 18px 16px 16px;
+background: #FFFFFF;
+}
+
+.button-text {
+    font-family: 'DM Mono';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24;
+    line-height: 31px;
+    color: black;
+}
+
+.grid{
+    display:grid;
+    grid-template-rows:auto;
+    grid-template-columns: 1fr;
+    padding: 0% 10%;
+}
+
+.flex-top-section{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 90vh;
+  background-image: url(/assets/particles.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.flex-item-1{
+    flex:100%;
+    margin: 50px;
+    align-items:flex-end;
+}
+
+.flex-item-2{
+    margin: 20px;
+}
+
+.flex-item-3{
+    margin: 2%;
+}
+
+.container-1{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px 10px;
+    border: #17FF3D;
+    border-style: solid;
+    border-width: 3px;
+    padding: 5%;
+    margin-top: 5%;
+    margin-bottom: 15%;
+    background-color: black;
+
+}
+
+.container-1 .item-2{
+    place-self: center;
+}
+
+.sub-item{
+    max-width: 500px;
+}
+
+.container-2{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px 10px;
+    border: #17FF3D;
+    border-style: solid;
+    border-width: 3px;
+    padding: 5%;
+    width: 50%;
+    margin-bottom: 15%;
+    background-color: black;
+}
+
+.back-image-1{
+    z-index: -1;
+    position: absolute;
+    top: 150%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.back-image-2{
+    z-index: -1;
+    position: absolute;
+    top: 200%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.back-image-3{
+    z-index: -1;
+    position: absolute;
+    top: 250%;
+    left: 30%;
+}
