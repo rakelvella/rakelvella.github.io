@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#e0e0ee" />
+    <meta name="description" content="Design projects by Rakel Vella." />
+    <title>Design — Rakel Vella</title>
+    <script>if (new URLSearchParams(location.search).get('from') === 'home') document.documentElement.classList.add('design-enter');</script>
+    <link rel="stylesheet" href="design.css?v=tbo-description-1" />
+    <script type="module" src="design.js?v=tbo-description-1"></script>
+  </head>
+  <body>
+    <svg aria-hidden="true" width="0" height="0" style="position: absolute; overflow: hidden">
+      <filter id="hero-gradient-map" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" values="6 0 0 0 -2.8  6 0 0 0 -2.8  6 0 0 0 -2.8  0 0 0 1 0" />
+        <feComponentTransfer>
+          <feFuncR type="linear" slope="-0.290196" intercept="0.878431" />
+          <feFuncG type="linear" slope="-0.149020" intercept="0.878431" />
+          <feFuncB type="linear" slope="-0.423529" intercept="0.933333" />
+        </feComponentTransfer>
+      </filter>
+      <filter id="hero-gradient-map-reversed" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" values="6 0 0 0 -2.8  6 0 0 0 -2.8  6 0 0 0 -2.8  0 0 0 1 0" />
+        <feComponentTransfer>
+          <feFuncR type="linear" slope="0.290196" intercept="0.588235" />
+          <feFuncG type="linear" slope="0.149020" intercept="0.729412" />
+          <feFuncB type="linear" slope="0.423529" intercept="0.509804" />
+        </feComponentTransfer>
+      </filter>
+    </svg>
+    <h1 class="visually-hidden">Design projects</h1>
+    <a class="home-link" href="index.html" aria-label="Back to Rakel Vella homepage">R4K // Rakel Vella</a>
+
+    <main class="design-page">
+      <div class="table-head" aria-hidden="true">
+        <span>Title</span>
+        <span>Type</span>
+        <span>Medium</span>
+        <span>Year</span>
+        <span>Hero Image</span>
+        <span class="table-head-toggle"></span>
+      </div>
+      <div id="design-projects" class="projects" aria-label="Design projects"></div>
+    </main>
+
+    <dialog class="design-lightbox" id="design-lightbox" aria-label="Enlarged project image">
+      <button class="design-lightbox-close" type="button" aria-label="Close enlarged image">×</button>
+      <button class="design-lightbox-arrow design-lightbox-prev" type="button" aria-label="Previous image">←</button>
+      <img alt="" />
+      <button class="design-lightbox-arrow design-lightbox-next" type="button" aria-label="Next image">→</button>
+    </dialog>
+  </body>
+</html>

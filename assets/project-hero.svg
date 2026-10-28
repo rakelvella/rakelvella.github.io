@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Abstract placeholder for a main project image">
+  <rect width="1200" height="900" fill="#d9d7d0"/>
+  <rect y="590" width="1200" height="310" fill="#aaa9a3"/>
+  <path d="M0 0h1200v140H0z" fill="#eeeae1"/>
+  <path d="M80 145h1040v450H80z" fill="#e8e5dd"/>
+  <path d="M315 140v450M850 140v450" stroke="#cdcac1" stroke-width="7"/>
+  <rect x="320" y="300" width="370" height="350" rx="8" fill="#ed817e"/>
+  <rect x="358" y="338" width="294" height="195" fill="#f8e8ad"/>
+  <circle cx="505" cy="435" r="65" fill="#d7c668"/>
+  <rect x="760" y="245" width="185" height="370" rx="5" fill="#4d5d55"/>
+  <rect x="790" y="290" width="125" height="210" fill="#c7d5c6"/>
+  <path d="M806 527h94M806 550h67M806 573h79" stroke="#9faf9e" stroke-width="7"/>
+  <path d="M0 590h1200" stroke="#98968f" stroke-width="9"/>
+</svg>

@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "ABC Areal";
+  src: url("assets/fonts/ABCAreal-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #fff; color: #282b2d; font-family: "ABC Areal", Arial, sans-serif; }
+button { font: inherit; }
+a { color: inherit; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+
+.page-header { position: absolute; top: 24px; right: clamp(22px, 3.7vw, 70px); z-index: 1; font-size: 14px; }
+.page-header a { text-decoration: none; }
+.page-header a:hover, .page-header a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
+
+.journal { padding: 68px 0 130px clamp(24px, 3.7vw, 70px); }
+.journal-entry {
+  display: grid;
+  grid-template-columns: minmax(220px, 32%) minmax(0, 1fr);
+  gap: clamp(24px, 2.2vw, 44px);
+  margin-bottom: clamp(110px, 12vw, 200px);
+}
+.journal-entry:last-child { margin-bottom: 0; }
+.entry-details { padding-top: 5px; font-size: 17px; line-height: 1.15; }
+.entry-details p { margin: 0; }
+.entry-details .entry-journal-label { margin-top: 26px; }
+.entry-details .entry-journal-text { max-width: 38ch; margin-top: 10px; line-height: 1.35; white-space: pre-line; }
+.photo-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(32px, 3.8vw, 74px);
+  padding: 0 clamp(24px, 3.7vw, 70px) 0 0;
+}
+.photo-card { flex: 0 0 auto; width: var(--photo-width); margin: 0; }
+.photo-card--wide { --photo-width: calc(clamp(195px, 13.2vw, 250px) * 4 / 3); }
+.photo-card--portrait { --photo-width: calc(clamp(195px, 13.2vw, 250px) * 3 / 4); }
+.photo-card--square { --photo-width: clamp(195px, 13.2vw, 250px); }
+.photo-open { display: block; width: 100%; height: clamp(195px, 13.2vw, 250px); border: 0; padding: 0; background: #e5e6e7; cursor: zoom-in; }
+.photo-open:hover { filter: brightness(.965); }
+.photo-open:focus-visible { outline: 2px solid #282b2d; outline-offset: 3px; }
+.photo-open img, .photo-placeholder { display: block; width: 100%; height: 100%; object-fit: contain; background: #e5e6e7; }
+.photo-card figcaption { margin-top: 3px; font-size: 8px; line-height: 1.2; }
+
+.photo-lightbox { position: fixed; inset: 0; width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; border: 0; padding: 65px 24px 24px; background: transparent; color: #282b2d; }
+.photo-lightbox::backdrop { background: rgba(255, 255, 255, .72); }
+.lightbox-close { position: absolute; top: 20px; right: 24px; border: 0; padding: 5px; background: transparent; font-size: 26px; line-height: 1; cursor: pointer; }
+.lightbox-content { display: flex; justify-content: center; align-items: center; height: calc(100% - 55px); }
+.lightbox-content img { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.lightbox-content .photo-placeholder { width: min(75vw, 900px); height: min(65vh, 650px); }
+.lightbox-content[data-shape="portrait"] .photo-placeholder { width: min(45vw, 440px); }
+.lightbox-content[data-shape="square"] .photo-placeholder { width: min(65vw, 650px); }
+.lightbox-footer { display: grid; grid-template-columns: 50px 1fr 50px; align-items: center; width: min(100%, 900px); height: 55px; margin: 0 auto; text-align: center; }
+.lightbox-footer p { margin: 0; font-size: 15px; }
+.lightbox-footer button { border: 0; padding: 8px; background: transparent; font-size: 24px; cursor: pointer; }
+.lightbox-footer button:disabled { opacity: .25; cursor: default; }
+
+@media (max-width: 850px) {
+  .page-header { top: 18px; right: 12px; font-size: 13px; }
+  .journal { padding: 95px 12px 80px; }
+  .journal-entry { display: block; margin-bottom: 90px; }
+  .entry-details { margin-bottom: 24px; font-size: 14px; }
+  .photo-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 28px 9px; padding: 0; }
+  .photo-card { width: 100%; min-width: 0; }
+  .photo-open { height: auto; aspect-ratio: 1; }
+  .photo-card--wide .photo-open { aspect-ratio: 4 / 3; }
+  .photo-card--portrait .photo-open { aspect-ratio: .75; }
+  .photo-card--square .photo-open { aspect-ratio: 1; }
+  .photo-card figcaption { display: none; }
+  .lightbox-content .photo-placeholder { width: 100%; height: 55vh; }
+  .lightbox-content[data-shape="portrait"] .photo-placeholder { width: 70%; }
+}
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

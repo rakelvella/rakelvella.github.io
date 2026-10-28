@@ -1,0 +1,101 @@
+.research-detail .project-gallery { min-height: 100svh; }
+.research-detail .project-media video { aspect-ratio: auto; }
+
+.research-detail .project-story a { color: #8bba7b; }
+
+.research-detail .project-story a:hover,
+.research-detail .project-story a:focus-visible {
+  background: #8bba7b;
+  color: #e3e8e9;
+  text-decoration: none;
+}
+
+.dream-edges .project-media--full-bleed {
+  width: calc(100% + var(--page-pad) + var(--page-pad));
+  margin: calc(0px - var(--page-pad)) calc(0px - var(--page-pad)) 0;
+}
+
+.c4ve-dweller .project-media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 24px);
+}
+
+.c4ve-dweller .project-media-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.c4ve-dweller .project-media-button:focus-visible { outline: 3px solid #8bba7b; outline-offset: 3px; }
+
+.c4ve-lightbox {
+  border: 0;
+  background: #e3e8e9;
+  color: #111;
+}
+
+.c4ve-lightbox[open] {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 48px 60px;
+}
+
+.c4ve-lightbox::backdrop { background: rgba(17, 17, 17, 0.75); }
+.c4ve-lightbox img { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.c4ve-lightbox img:not([src]) { visibility: hidden; }
+
+.c4ve-lightbox button {
+  position: absolute;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: #e3e8e9;
+  color: #111;
+  font: 34px/1 "ABC Areal", Arial, sans-serif;
+  cursor: pointer;
+}
+
+.c4ve-lightbox button:hover,
+.c4ve-lightbox button:focus-visible { background: #8bba7b; }
+.c4ve-lightbox button:focus-visible { outline: 2px solid #111; outline-offset: 2px; }
+.c4ve-lightbox-close { top: 12px; right: 12px; }
+.c4ve-lightbox-arrow { top: 50%; transform: translateY(-50%); }
+.c4ve-lightbox-prev { left: 8px; }
+.c4ve-lightbox-next { right: 8px; }
+
+.research-media-placeholder {
+  display: grid;
+  place-items: center;
+  flex: 1;
+  min-height: 60svh;
+  border: 1px solid currentColor;
+  padding: 24px;
+  color: #555e60;
+  font-size: clamp(15px, 1.25vw, 18px);
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .research-detail .project-gallery { min-height: 70svh; }
+  .research-media-placeholder { min-height: 55svh; }
+}
+
+@media (max-width: 480px) {
+  .c4ve-dweller .project-media-grid { grid-template-columns: 1fr; }
+}

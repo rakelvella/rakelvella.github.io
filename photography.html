@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="A photography journal by Rakel Vella." />
+    <title>Photography Journal — Rakel Vella</title>
+    <link rel="stylesheet" href="photography.css" />
+    <script type="module" src="photography.js"></script>
+  </head>
+  <body>
+    <h1 class="visually-hidden">Photography journal</h1>
+    <header class="page-header">
+      <a href="index.html" aria-label="Back to Rakel Vella homepage">R4K // Rakel Vella ↗</a>
+    </header>
+
+    <main id="journal" class="journal" aria-label="Photography journal entries"></main>
+
+    <dialog id="photo-lightbox" class="photo-lightbox" aria-label="Enlarged photograph">
+      <button type="button" class="lightbox-close" aria-label="Close enlarged photograph">×</button>
+      <div class="lightbox-content"></div>
+      <div class="lightbox-footer">
+        <button type="button" class="lightbox-previous" aria-label="Previous photograph">←</button>
+        <p class="lightbox-caption"></p>
+        <button type="button" class="lightbox-next" aria-label="Next photograph">→</button>
+      </div>
+    </dialog>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Abstract placeholder for a process image">
+  <rect width="1200" height="800" fill="#e3e2da"/>
+  <rect x="75" y="68" width="1050" height="660" fill="#f2eee5"/>
+  <rect x="154" y="150" width="370" height="486" fill="#e6ab96"/>
+  <rect x="201" y="196" width="275" height="390" fill="#f9e79f"/>
+  <path d="M248 275h180M248 322h145M248 369h164M248 416h120" stroke="#30352f" stroke-width="15"/>
+  <circle cx="797" cy="375" r="215" fill="#7d9685"/>
+  <rect x="674" y="245" width="250" height="270" rx="9" fill="#d7d3c4"/>
+  <rect x="707" y="285" width="184" height="140" fill="#273a36"/>
+  <path d="M731 319h138M731 348h113M731 377h126" stroke="#d4ddce" stroke-width="7"/>
+  <path d="M710 462h177" stroke="#8f988a" stroke-width="14"/>
+</svg>

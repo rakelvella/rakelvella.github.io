@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1080" role="img" aria-label="Abstract placeholder for a project detail image">
+  <rect width="900" height="1080" fill="#dad9d2"/>
+  <rect x="70" y="65" width="760" height="950" fill="#eeeae2"/>
+  <circle cx="448" cy="460" r="288" fill="#f08080"/>
+  <path d="M275 290h350v340H275z" fill="#f8e79f"/>
+  <path d="M335 346h230v222H335z" fill="#293e3a"/>
+  <path d="M360 380h180M360 410h141M360 440h165M360 470h124M360 500h179" stroke="#d6dccb" stroke-width="9"/>
+  <rect x="180" y="710" width="540" height="150" fill="#aeb8a9"/>
+  <path d="M210 750h480M210 784h410M210 818h445" stroke="#e8e5db" stroke-width="12"/>
+</svg>
